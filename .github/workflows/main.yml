@@ -18,6 +18,6 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Login to Expo
-      run: expo login -u ${{ secrets.EXPO_CLI_USERNAME }} -p ${{ secrets.EXPO_CLI_PASSWORD }}
+      run: npx expo login -u ${{ secrets.EXPO_CLI_USERNAME }} -p ${{ secrets.EXPO_CLI_PASSWORD }}
     - name: Build the project
-      run: eas build --platform android --non-interactive
+      run: npx eas build --platform android --non-interactive
